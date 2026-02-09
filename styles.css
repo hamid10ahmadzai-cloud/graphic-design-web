@@ -376,3 +376,113 @@ body {
   background-color: #2563EB;
   color: #FFFFFF;
 }
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1E293B;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #F8FAFC;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #F8FAFC;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #F8FAFC;
+  cursor: pointer;
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;              /* 🔥 force hide */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #0F172A;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;              /* 🔥 show ONLY when active */
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+}
+#whatsapp-logo {
+  width: 40px;
+  color: #1E293B;
+}
+button {
+  margin-top: 20px;
+  color: #1E293B;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}

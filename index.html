@@ -13,6 +13,8 @@
   </style>
 
 </head>
+
+
 <body>
 
   <!-- NAVBAR -->
@@ -20,7 +22,8 @@
     <div class="logo">
       <a href="#hero">DesignStudio</a>
     </div>
-    <ul class="nav-links">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#services">Services</a></li>
@@ -117,16 +120,27 @@
   </section>
   <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
-    <h2 class="section-title">Contact Us</h2>
-
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+    <h2>Contact Us</h2>
+    <h3>Ready to start your project? Get in touch with us!</h3>
+    <button id="WhatsApp"><a href="https://wa.me/93781231533"><img id="whatsapp-logo" src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-whatsapp-icon-png-image_3584844.jpg" alt="WhatsApp"></a></button>
+    
   </section>
 
 
+
 </body>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+</script>
 </html>
