@@ -167,8 +167,21 @@ body {
   .hero p {
     font-size: 0.9rem;
   }
+  /* Make hero buttons stack and center on very small screens. 
+     Removing the fixed 100px width (which caused overflow/centering issues)
+     and making buttons full-width inside a centered container. */
   .hero-buttons {
-    width: 100px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
     border-radius: 20px;
   }
 }
