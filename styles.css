@@ -12,6 +12,13 @@ body {
   color: #CBD5E1;
 }
 
+#logo {
+  width: 250px;
+}
+#logo-hero {
+  width: 300px;
+  margin-bottom: 30px;
+}
 /* NAVBAR */
 .navbar {
   position: fixed;
